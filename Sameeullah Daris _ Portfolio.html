@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sameeullah Daris | Solution Architect &amp; Full Stack .NET Engineer</title>
+<meta name="description" content="15+ years building scalable .NET web applications, REST APIs, microservices and SharePoint solutions across Qatar, the UAE and the Gulf.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏛️</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F3F5F8; --surface:#FFFFFF; --ink:#16212F; --muted:#56637A; --line:#D5DBE4;
+  --accent:#8A1538; --accent-ink:#FFFFFF; --teal:#1E6E78; --tint:#E8EDF4;
+  --display:"Bricolage Grotesque","Segoe UI",Arial,sans-serif;
+  --body:"IBM Plex Sans","Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#101823; --surface:#18232F; --ink:#E9EEF5; --muted:#9AA8BC; --line:#2A3949;
+    --accent:#E0607F; --accent-ink:#101823; --teal:#5FC0CB; --tint:#1D2B3A; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#101823; --surface:#18232F; --ink:#E9EEF5; --muted:#9AA8BC; --line:#2A3949;
+  --accent:#E0607F; --accent-ink:#101823; --teal:#5FC0CB; --tint:#1D2B3A; color-scheme:dark;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--body);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.1;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4vw,2.6rem);font-weight:800;margin-bottom:12px}
+section{padding:84px 0}
+.lede{color:var(--muted);max-width:62ch;margin-bottom:40px}
+
+/* nav */
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px}
+.brand{font:800 1.1rem var(--display);text-decoration:none}
+.links{display:flex;gap:22px;align-items:center;font-size:.95rem}
+.links a{text-decoration:none;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+#theme{background:none;border:1px solid var(--line);color:var(--ink);border-radius:999px;width:36px;height:36px;cursor:pointer;font-size:1rem}
+
+/* hero */
+.hero{padding:72px 0 64px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.role{display:inline-block;background:var(--tint);color:var(--teal);font-weight:600;font-size:.9rem;padding:6px 14px;border-radius:999px;margin-bottom:22px}
+h1{font-size:clamp(2.6rem,6.4vw,4.6rem);font-weight:800;margin-bottom:22px}
+h1 span{display:block;color:var(--accent)}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:54ch;margin-bottom:30px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:600;text-decoration:none;border:2px solid var(--accent);transition:transform .15s}
+.btn.main{background:var(--accent);color:var(--accent-ink)}
+.btn.ghost{color:var(--accent)}
+.btn:hover{transform:translateY(-2px)}
+
+/* architecture stack diagram: the one memorable element */
+.stack{display:grid;gap:10px;perspective:900px}
+.layer{display:flex;justify-content:space-between;align-items:center;gap:12px;background:var(--surface);border:1.5px solid var(--ink);border-radius:12px;padding:14px 18px;font-weight:600;box-shadow:6px 6px 0 var(--line);transform:translateX(0);animation:slide .7s cubic-bezier(.2,.8,.2,1) both}
+.layer small{font-weight:400;color:var(--muted);font-size:.8rem;text-align:right}
+.layer:nth-child(1){margin-left:0;animation-delay:.05s}
+.layer:nth-child(2){margin-left:18px;animation-delay:.15s}
+.layer:nth-child(3){margin-left:36px;animation-delay:.25s}
+.layer:nth-child(4){margin-left:18px;animation-delay:.35s}
+.layer:nth-child(5){margin-left:0;animation-delay:.45s}
+.layer.hl{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.layer.hl small{color:inherit;opacity:.85}
+@keyframes slide{from{opacity:0;transform:translateX(40px)}to{opacity:1;transform:none}}
+
+/* stats */
+.facts{border-block:1px solid var(--line);background:var(--surface)}
+.facts .wrap{display:grid;grid-template-columns:repeat(4,1fr)}
+.fact{padding:26px 20px;border-left:1px solid var(--line)}
+.fact:first-child{border-left:0;padding-left:0}
+.fact b{display:block;font:800 2rem var(--display);color:var(--accent)}
+.fact span{color:var(--muted);font-size:.92rem}
+
+/* about */
+.about{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.about p+p{margin-top:16px}
+.edu{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:24px;align-self:start}
+.edu h3{font-size:1.15rem;margin-bottom:14px}
+.edu li{list-style:none;padding:10px 0;border-top:1px solid var(--line);font-size:.95rem}
+.edu li:first-of-type{border:0}
+.edu em{display:block;color:var(--teal);font-style:normal;font-weight:600;font-size:.85rem}
+
+/* projects */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;display:flex;flex-direction:column;gap:12px;border-top:4px solid var(--teal)}
+.card.gov{border-top-color:var(--accent)}
+.card h3{font-size:1.35rem}
+.card .sector{color:var(--muted);font-size:.88rem;font-weight:500}
+.card p{font-size:.97rem;color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:6px}
+.tags span{background:var(--tint);border-radius:6px;padding:3px 10px;font-size:.8rem;font-weight:500}
+.visit{font-weight:600;color:var(--accent);text-decoration:none}
+.visit:hover{text-decoration:underline}
+.private{color:var(--muted);font-size:.88rem}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.skill{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:22px}
+.skill h3{font-size:1.1rem;margin-bottom:10px;color:var(--teal)}
+.skill li{list-style:none;padding:4px 0;font-size:.95rem}
+
+/* timeline */
+.timeline{border-left:2px solid var(--line);margin-left:6px}
+.job{position:relative;padding:0 0 34px 30px}
+.job::before{content:"";position:absolute;left:-8px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--bg);border:3px solid var(--accent)}
+.job time{color:var(--teal);font-weight:600;font-size:.88rem}
+.job h3{font-size:1.2rem;margin:2px 0}
+.job .org{color:var(--muted);font-size:.95rem;margin-bottom:8px}
+.job ul{padding-left:18px;color:var(--muted);font-size:.95rem}
+.more summary{cursor:pointer;color:var(--accent);font-weight:600;padding:6px 0 26px 30px}
+.more .job:last-child{padding-bottom:0}
+
+/* contact */
+.contact{background:var(--ink);color:var(--bg)}
+.contact h2{color:var(--bg)}
+.contact p{max-width:56ch;opacity:.85;margin-bottom:28px}
+.contact .btn.main{background:var(--bg);color:var(--ink);border-color:var(--bg)}
+.contact .btn.ghost{color:var(--bg);border-color:var(--bg)}
+footer{padding:26px 0;text-align:center;color:var(--muted);font-size:.88rem}
+
+@media (max-width:820px){
+  .hero .wrap,.about{grid-template-columns:1fr}
+  .facts .wrap{grid-template-columns:1fr 1fr}
+  .fact:nth-child(3){border-left:0;padding-left:0}
+  .links a{display:none}
+  section{padding:60px 0}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top">Sameeullah Daris</a>
+    <div class="links">
+      <a href="#about">About</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      <button id="theme" aria-label="Toggle light and dark theme" title="Toggle theme">◐</button>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="role">Senior Software Engineer / Solution Architect (.NET)</span>
+      <h1>I design and build enterprise systems that scale.<span>Doha, Qatar</span></h1>
+      <p>15+ years of enterprise software development across Qatar, the UAE and the wider Gulf. I deliver scalable web applications, RESTful APIs and microservices, from architecture and design through to production support.</p>
+      <div class="btns">
+        <a class="btn main" href="#projects">See my projects</a>
+        <a class="btn ghost" href="mailto:samee.daris@gmail.com">Email me</a>
+      </div>
+    </div>
+    <div class="stack" aria-label="Typical solution architecture I design">
+      <div class="layer">Angular / React front end <small>Kendo UI, TypeScript</small></div>
+      <div class="layer">ASP.NET Core Web APIs <small>REST, microservices</small></div>
+      <div class="layer hl">Business &amp; workflow layer <small>Power Automate, SharePoint</small></div>
+      <div class="layer">SQL Server &amp; Entity Framework <small>Dapper, OData</small></div>
+      <div class="layer">Azure, AWS &amp; DevOps <small>CI/CD pipelines</small></div>
+    </div>
+  </div>
+</header>
+
+<div class="facts">
+  <div class="wrap">
+    <div class="fact"><b>15+</b><span>years of enterprise development</span></div>
+    <div class="fact"><b>12+</b><span>years in SharePoint and Microsoft tech</span></div>
+    <div class="fact"><b>6</b><span>countries delivered in</span></div>
+    <div class="fact"><b>8</b><span>industry sectors served</span></div>
+  </div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div>
+      <h2>About me</h2>
+      <p>I'm a full stack solution architect and technical team lead. I combine hands-on .NET development with architecture, team leadership and delivery of complete enterprise solutions.</p>
+      <p>My work covers the full software lifecycle: requirements analysis, high and low-level design, development, deployment and Level 2 production support. I've delivered for Government, Telecom, Banking, Financial Services, Stock Market, Homebuilding, Real Estate and Utilities clients in Qatar, UAE, KSA, USA, Canada and Australia.</p>
+      <p>I focus on secure, maintainable systems, on integrating different technologies cleanly, and on leading engineering teams to ship.</p>
+    </div>
+    <aside class="edu">
+      <h3>Education</h3>
+      <ul>
+        <li><em>2013</em>Master's in Business &amp; Information Technology (MBIT)</li>
+        <li><em>2004, First Position and University Best Student</em>Master's in Telecommunication</li>
+        <li><em>2003, First Position</em>Bachelor's in Telecommunications</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section id="projects" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <h2>Projects</h2>
+    <p class="lede">A selection of live products and government systems I've helped design, build and support.</p>
+    <div class="grid">
+
+      <article class="card gov">
+        <h3>Qatar General Tax Authority: Advance Tax Ruling System</h3>
+        <span class="sector">Government, Qatar</span>
+        <p>A workflow-driven system where taxpayers submit advance ruling requests and the authority reviews and approves them. Built on SharePoint with automated approvals and a secure permission model.</p>
+        <div class="tags"><span>SharePoint Online</span><span>Power Automate</span><span>Governance</span></div>
+        <span class="private">Internal government system, not publicly accessible</span>
+      </article>
+
+      <article class="card gov">
+        <h3>Qatar General Tax Authority: Meeting System</h3>
+        <span class="sector">Government, Qatar</span>
+        <p>A portal for scheduling and managing meetings between the authority and its stakeholders, with approval flows, role-based access and Level 2 production support.</p>
+        <div class="tags"><span>SharePoint 2019</span><span>Hybrid</span><span>Power Automate</span></div>
+        <span class="private">Internal government system, not publicly accessible</span>
+      </article>
+
+      <article class="card">
+        <h3>Constellation Home Builders</h3>
+        <span class="sector">Homebuilding, USA</span>
+        <p>A public website for a homebuilder, covering communities and home listings for prospective buyers.</p>
+        <div class="tags"><span>.NET</span><span>Web</span><span>SQL Server</span></div>
+        <a class="visit" href="https://www.constellationhb.com/" target="_blank" rel="noopener">Visit constellationhb.com</a>
+      </article>
+
+      <article class="card">
+        <h3>GulfBase</h3>
+        <span class="sector">Stock market and financial data, Gulf</span>
+        <p>A Gulf stock market information platform. I built analytical systems, financial data processing services and Dundas charting integrations.</p>
+        <div class="tags"><span>C#.NET</span><span>Data services</span><span>Dundas charts</span></div>
+        <a class="visit" href="https://www.gulfbase.com" target="_blank" rel="noopener">Visit gulfbase.com</a>
+      </article>
+
+      <article class="card">
+        <h3>Rainsoft</h3>
+        <span class="sector">Consumer and dealer web platform, USA</span>
+        <p>A large public-facing corporate and dealer website for the water treatment brand, built with ASP.NET MVC and Entity Framework.</p>
+        <div class="tags"><span>ASP.NET MVC</span><span>Entity Framework</span><span>SQL Server</span></div>
+        <a class="visit" href="https://www.rainsoft.com/" target="_blank" rel="noopener">Visit rainsoft.com</a>
+      </article>
+
+      <article class="card">
+        <h3>AHC Lending</h3>
+        <span class="sector">Mortgage and lending</span>
+        <p>A lending website and application experience for mortgage customers, drawing on my background in mortgage and financial applications.</p>
+        <div class="tags"><span>.NET</span><span>Financial apps</span><span>REST APIs</span></div>
+        <a class="visit" href="http://ahclending.com/" target="_blank" rel="noopener">Visit ahclending.com</a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>Skills</h2>
+    <p class="lede">The stack I use to take a solution from design to production.</p>
+    <div class="skills">
+      <div class="skill"><h3>Backend</h3><ul><li>C#, .NET Core / ASP.NET Core</li><li>MVC, Web API, RESTful APIs</li><li>Entity Framework, Dapper, OData</li><li>SQL Server database design</li><li>Domain-Driven Design</li></ul></div>
+      <div class="skill"><h3>Frontend</h3><ul><li>Angular 2/4/5, TypeScript</li><li>JavaScript, jQuery, AJAX</li><li>Kendo UI / Telerik</li><li>React (SPFx web parts)</li></ul></div>
+      <div class="skill"><h3>Microsoft 365 and SharePoint</h3><ul><li>SharePoint Online, 2016 and 2019</li><li>SPFx, REST API, CSOM</li><li>Hybrid and cloud migration</li><li>DMS / ECM governance</li></ul></div>
+      <div class="skill"><h3>Power Platform and AI</h3><ul><li>Power Apps (Canvas, Model-driven)</li><li>Power Automate and approvals</li><li>Azure OpenAI Studio</li><li>ChatGPT Enterprise architecture</li></ul></div>
+      <div class="skill"><h3>Cloud and DevOps</h3><ul><li>Microsoft Azure and AWS</li><li>Azure DevOps: Boards, Repos, Pipelines</li><li>CI/CD design and release automation</li></ul></div>
+      <div class="skill"><h3>Architecture and leadership</h3><ul><li>Enterprise solution architecture</li><li>HLD / LLD and technical reviews</li><li>Team leadership and coordination</li><li>Level 2 production support</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" style="background:var(--surface);border-block:1px solid var(--line)">
+  <div class="wrap">
+    <h2>Experience</h2>
+    <p class="lede">From stock market systems in Jeddah to government portals in Doha.</p>
+    <div class="timeline">
+      <div class="job"><time>Mar 2025 to present</time><h3>Full Stack Developer and SharePoint Architect</h3><div class="org">General Tax Authority (via Malomatia), Doha, Qatar</div><ul><li>Architect SharePoint Online and hybrid SharePoint 2019 solutions for government departments.</li><li>Automate approvals with Power Automate and provide Level 2 support for mission-critical apps.</li><li>Define governance models and secure permission architecture.</li></ul></div>
+      <div class="job"><time>Apr 2024 to Mar 2025</time><h3>Senior Software Engineer / Application Support Engineer</h3><div class="org">Etisalat (via Techvista), Sharjah, UAE</div><ul><li>Delivered SharePoint Online and 2019 solutions for telecom operations.</li><li>Integrated .NET Web APIs with SharePoint portals and managed Azure DevOps CI/CD releases.</li></ul></div>
+      <div class="job"><time>Feb 2023 to Mar 2024</time><h3>Senior Software Architect / Team Lead</h3><div class="org">Contour Software, Karachi</div><ul><li>Designed CI/CD pipelines, led architecture discussions and enforced governance and access control.</li></ul></div>
+      <div class="job"><time>Oct 2018 to Feb 2023</time><h3>Principal Software Developer / Full Stack Developer</h3><div class="org">Contour Software, Karachi</div><ul><li>Led web application architecture and built REST APIs with .NET Core and Dapper.</li><li>Developed SharePoint 2016 workflows and React-based solutions.</li></ul></div>
+    </div>
+    <details class="more">
+      <summary>Earlier roles (2007 to 2018)</summary>
+      <div class="timeline">
+        <div class="job"><time>May to Sep 2018</time><h3>Lead Full Stack Developer / Architect</h3><div class="org">Northern Sky Technologies (Film Dove), USA</div><ul><li>Built .NET Core and Entity Framework services with an Angular front end.</li></ul></div>
+        <div class="job"><time>Jan to Apr 2018</time><h3>Consultant Senior Software Architect</h3><div class="org">iSplendid, Karachi</div><ul><li>Implemented Domain-Driven Design and OData APIs.</li></ul></div>
+        <div class="job"><time>Jul 2015 to Dec 2017</time><h3>Principal Software Engineer (.NET) / Assistant Team Lead</h3><div class="org">ZEPCOM, Karachi</div><ul><li>Delivered custom CRM solutions and led technical architecture decisions.</li></ul></div>
+        <div class="job"><time>Jun to Jul 2015</time><h3>Enterprise Application Architect (Consultant)</h3><div class="org">Background Check, Karachi</div><ul><li>Designed secure, scalable ASP.NET MVC applications.</li></ul></div>
+        <div class="job"><time>Feb 2014 to May 2015</time><h3>Senior Software Engineer</h3><div class="org">Rainsoft, Karachi</div><ul><li>Built financial and enterprise applications with ASP.NET MVC and Entity Framework.</li></ul></div>
+        <div class="job"><time>Feb 2011 to Feb 2014</time><h3>Senior Software Engineer (Application Architect)</h3><div class="org">Object Synergy International, Australia and Pakistan</div><ul><li>Delivered mortgage and financial applications for Australian clients.</li></ul></div>
+        <div class="job"><time>Jun 2007 to Aug 2010</time><h3>C#.NET Software Engineer</h3><div class="org">GulfBase.com (ZKFC), Jeddah, Saudi Arabia</div><ul><li>Developed stock market analytical systems and integrated Dundas charting.</li></ul></div>
+      </div>
+    </details>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <h2>Let's build something solid</h2>
+    <p>I'm open to Senior Software Engineer and Solution Architect (.NET) roles in Qatar and the Gulf. Send me a message and I'll reply quickly.</p>
+    <div class="btns">
+      <a class="btn main" href="mailto:samee.daris@gmail.com">samee.daris@gmail.com</a>
+      <a class="btn ghost" href="tel:+97471021600">+974 7102 1600</a>
+      <a class="btn ghost" href="https://pk.linkedin.com/in/sameedaris" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Sameeullah Daris. Doha, Qatar.</footer>
+
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById("theme");
+  btn.addEventListener("click",function(){
+    var dark=root.getAttribute("data-theme")==="dark"||(!root.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);
+    root.setAttribute("data-theme",dark?"light":"dark");
+  });
+})();
+</script>
+</body>
+</html>
